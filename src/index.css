@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: #ffffff;
+
+}
+
+.App{
+  margin-top: 5px;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.player{
+  display: block;
+  background-color: black;
+  margin: 0px auto;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0,0, 0.2), inset 6px 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.player > h4{
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center; 
+}
+
+
+
+
+
+.details .details_img{
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.details .details_img img{
+  display: block;
+  margin: 50px auto;
+  object-fit: contain;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: rgb(255, 255, 255, 0.5);
+}
+
+.details .details_img::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  bottom: -25px;
+  right: -25px;
+  border-radius: 50%;
+  border: 3px dashed rgba(255, 255, 255, 0.9);
+  
+}
+
+.details .details_title{
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.details .details_artist{
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.control{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+}
+
+.control .control_PlayButton{
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  border: none;
+  outline-width: 0;
+  background-color: #ffffff;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ .control .control_skipBtn{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+ }
+
+ audio::-webkit-media-controls-play-button{
+  display: none;
+ }
+  audio{
+    opacity: 0.4;
+    outline-width: 0;    
+    margin-top: -5px;
+
+
+  }
+
+  .control_PlayButton .control_skipBtn::hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+    color: black;
+    background-color: inherit;
+  }
